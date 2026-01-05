@@ -4,8 +4,6 @@ const port = process.env.PORT || 5000
 
 const app = express();
 
-app.get('/api/tasks', (req, res) => {
-    res.status(200).json({ message: 'Get All Tasks' });
-})
+app.use('/api/tasks', require('./routes/taskRoute'));
 
 app.listen(port, () => console.log(`Server listening on port ${port}!`))
