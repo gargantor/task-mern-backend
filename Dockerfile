@@ -2,7 +2,7 @@
 FROM node:18
 
 # Set the working directory in the container 
-WORKDIR /as
+WORKDIR /app
 
 # Copy the application files into the working directory
 COPY . /app
